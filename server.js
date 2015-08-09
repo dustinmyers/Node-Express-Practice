@@ -3,7 +3,7 @@
 ///////////////////////////////////////////
 var express = require('express')
   , bodyParser = require('body-parser')
-  , cors = require('cors')
+  , cors = require('cors');
 
 // Initiate app
 var app = express();
@@ -12,9 +12,9 @@ var app = express();
 ///////////////////////////////////////////
 //      MIDDLEWARE
 ///////////////////////////////////////////
-app.use(express.static('/public'));
-app.use(cors());
-app.use(bodyParser());
+app.use(express.static('/public'));         //Serves html, JS, Angular files
+app.use(cors());                            //sends headers
+app.use(bodyParser());                      //Parses all requests to JSON
 
 
 ///////////////////////////////////////////
@@ -29,5 +29,5 @@ app.use(bodyParser());
 var port = process.env.API_PORT || 3015;
 
 app.listen(port, function() {
-    console.log('Watch out... I\'m coming..', port);
+    console.log('Powering on.... Paired: ', port);
 });
