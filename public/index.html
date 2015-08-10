@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app='nodePractice'>
 <head>
-    <title>Node.JS Practice</title>
+    <title>NodeJS Practice</title>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" type="text/css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <link rel="stylesheet" href="styles/styles.css" type="text/css" />
 </head>
-<body>
+<body data-ng-controller='HomeCtrl'>
     
+    <!--<h1>{{ test }}</h1>-->
+    <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="rude" class="md-primary">
+        Rude Message
+    </md-checkbox>
+    <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="positive" class="md-primary">
+        Positive Message
+    </md-checkbox>
+    <md-button class="md-raised md-primary" ng-model='rude' ng-click='testData()'>Get Message</md-button>
+
+    <h1>Your Message: {{ nodeTestData }}</h1>
+    <div ui-view='content'></div>
     
     <!--BOWER COMPONENTS-->
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower-components/angular-animate/angular-animate.js"></script>
-    <script type="text/javascript" src="bower-components/angular-aria/angular-aria.js"></script>
-    <script type="text/javascript" src="bower_components/angular-material/angular-material.css"></script>
-    <script type="text/javascript" src="bower-components/ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="bower_components/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="bower_components/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="bower_components/ui-router/release/angular-ui-router.js"></script>
 
     
     <!--LOCAL FILES-->
